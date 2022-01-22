@@ -129,4 +129,10 @@
     {
         "key": "ctrl+alt+o",
         "command": "workbench.action.terminal.killInstance",
-        "when": "
+        "when": "terminalIsOpen && TerminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "workbench.action.terminal.kill"
+    }
+]
