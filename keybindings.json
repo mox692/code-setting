@@ -129,10 +129,45 @@
     {
         "key": "ctrl+alt+o",
         "command": "workbench.action.terminal.killInstance",
-        "when": "terminalIsOpen && TerminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+        "when": "terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "delete",
+        "command": "-workbench.action.terminal.killInstance",
+        "when": "terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
     },
     {
         "key": "alt+cmd+k",
         "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "f4",
+        "command": "-search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-explorer.openAndPassFocus",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
     }
 ]
