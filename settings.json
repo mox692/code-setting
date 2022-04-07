@@ -51,11 +51,11 @@
       ]
     }
   ],
-  // LSPとのlogを見る設定
   "go.logging.level": "verbose",
   "go.trace.server": "verbose",
+  // "go.useLanguageServer": false,
   "gopls": {
-    "verboseOutput": true
+    "verboseOutput": true,
   },
   // syscall/jsを名前解決できるようにするための設定
   // !!! 必要ない時はOFFにする
@@ -72,11 +72,14 @@
   "vim.hlsearch": true,
   "editor.codeActionsOnSave": null,
   "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    // "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
   },
+  "files.insertFinalNewline": true,
   // "editor.defaultFormatter": "golang.go",
   "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format",
+    // "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
     "editor.wordBasedSuggestions": false,
     "editor.suggest.insertMode": "replace",
     "editor.semanticHighlighting.enabled": true
@@ -102,17 +105,13 @@
 
   // "ocaml.merlinPath": "/Users/nick/.opam/system/bin/ocamlmerlin",
   "reason.path.ocamlmerlin": "/Users/nick/.opam/system/bin/ocamlmerlin",
+  // "workbench.editorAssociations": {
+  // },
+  "redhat.telemetry.enabled": false,
   "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    },
     {
       "viewType": "jupyter-notebook",
       "filenamePattern": "*.ipynb"
     }
-  ],
-  "window.zoomLevel": 1,
-  "redhat.telemetry.enabled": false
+  ]
 }
-

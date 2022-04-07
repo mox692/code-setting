@@ -21,7 +21,7 @@
         "command": "-workbench.action.focusSecondEditorGroup"
     },
     {
-        "key": "shift+cmd+j",
+        "key": "shift+cmd+h",
         "command": "workbench.action.togglePanel"
     },
     {
@@ -169,5 +169,61 @@
         "key": "cmd+down",
         "command": "-explorer.openAndPassFocus",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "cmd+n cmd+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+cmd+enter",
+        "command": "revealReference",
+        "when": "listFocus && referenceSearchVisible && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-revealReference",
+        "when": "listFocus && referenceSearchVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.scm.focus"
+    },
+    {
+        "key": "alt+cmd+g",
+        "command": "git.stage"
+    },
+    {
+        "key": "cmd+b shift+cmd+b",
+        "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     }
 ]
