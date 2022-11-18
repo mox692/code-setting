@@ -155,7 +155,7 @@
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     },
     {
-        "key": "ctrl+alt+k",
+        "key": "ctrl+alt+n",
         "command": "extension.coq.interpretToPoint",
         "when": "editorTextFocus && editorLangId == 'coq'"
     },
@@ -172,6 +172,46 @@
     {
         "key": "ctrl+alt+right",
         "command": "-extension.coq.interpretToPoint",
+        "when": "resourceScheme == 'coq-view'"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "extension.coq.stepBackward",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-extension.coq.stepBackward",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "extension.coq.stepBackward",
+        "when": "resourceScheme == 'coq-view'"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-extension.coq.stepBackward",
+        "when": "resourceScheme == 'coq-view'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "extension.coq.stepForward",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "-extension.coq.stepForward",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "extension.coq.stepForward",
+        "when": "resourceScheme == 'coq-view'"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "-extension.coq.stepForward",
         "when": "resourceScheme == 'coq-view'"
     }
 ]
