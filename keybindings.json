@@ -1,4 +1,3 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
 [
     {
         "key": "shift+cmd+[BracketLeft]",
@@ -21,7 +20,7 @@
         "command": "-workbench.action.focusSecondEditorGroup"
     },
     {
-        "key": "shift+cmd+j",
+        "key": "shift+cmd+h",
         "command": "workbench.action.togglePanel"
     },
     {
@@ -129,10 +128,50 @@
     {
         "key": "ctrl+alt+o",
         "command": "workbench.action.terminal.killInstance",
-        "when": "terminalIsOpen && TerminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+        "when": "terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
     },
     {
         "key": "alt+cmd+k",
         "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "cmd+b shift+cmd+b",
+        "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "extension.coq.interpretToPoint",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-extension.coq.interpretToPoint",
+        "when": "editorTextFocus && editorLangId == 'coq'"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "extension.coq.interpretToPoint",
+        "when": "resourceScheme == 'coq-view'"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-extension.coq.interpretToPoint",
+        "when": "resourceScheme == 'coq-view'"
     }
 ]

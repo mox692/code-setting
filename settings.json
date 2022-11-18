@@ -70,6 +70,7 @@
 
   "go.installDependenciesWhenBuilding": false,
   "vim.hlsearch": true,
+  "files.insertFinalNewline": true,
   "editor.codeActionsOnSave": null,
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
@@ -112,7 +113,20 @@
       "filenamePattern": "*.ipynb"
     }
   ],
+  "redhat.telemetry.enabled": false,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "haskell.manageHLS": "GHCup",
   "window.zoomLevel": 1,
-  "redhat.telemetry.enabled": false
+
+  // coq
+  "coqtop.binPath": "/Applications/Coq-Platform~8.15~2022.04.app/Contents/Resources/bin", // specify the path to coqtop (e.g. "path/to/coq/bin/")
+  "coqtop.args": [], // an array of strings specifying additional command line arguments for coqtop
+  "coqtop.loadCoqProject": true, // set to false to ignore _CoqProject
+  "coqtop.coqProjectRoot": ""
 }
 
